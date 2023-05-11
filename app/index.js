@@ -1,10 +1,30 @@
-import { View,Text } from "react-native";
+import { Stack } from "expo-router";
+import { View,Text, SafeAreaView, ScrollView,FlatList } from "react-native";
+import FeaturedCat from "../components/HomeScreen/FeaturedCat"
+import SearchBar from "../components/HomeScreen/SearchBar"
+import OtherCat from "../components/HomeScreen/OtherCat";
 
 const Home = () => {
+
     return (
-        <View>
-          <Text className="text-2xl text-red-500">HomeScreen</Text>
-        </View>
+        <SafeAreaView>
+
+     <Stack.Screen
+      options={{
+        headerTitle:"",
+        
+        headerLeft : () => (
+        <SearchBar />  
+        )
+              
+      }}/>
+          <ScrollView>
+
+          <FeaturedCat />    
+          <OtherCat />
+
+          </ScrollView>
+        </SafeAreaView>
     )
 }
 
