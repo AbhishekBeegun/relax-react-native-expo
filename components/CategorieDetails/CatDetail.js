@@ -1,19 +1,35 @@
 import React from 'react'
+import { useState } from "react"
+import { useEffect } from "react"
 import Card from "../../components/Card"
 import { View,Text } from "react-native"
 import { FlatList } from "react-native"
 
+import {getCategoriePosts } from "../../lib/client"
 
-const CatDetail = () => {
 
-  let crd = [1,2,3,4,5,6,7,8]
+const CatDetail = ({paramsid}) => {
+
+  const [Data, setData] = useState(null)
+
+  useEffect(() => {
+    getCategoriePosts(paramsid).then((data) => setData(data))
+    .then(console.log(Data))
+    .catch(console.error)     
+
+  }, [])
+  
+
   return (
-    <View>
+    <View className="py-16">
       <FlatList
-          data={crd}
+          data={Data}
           renderItem={({ item }) => (
-            <View style={{ flex: 1, flexDirection: 'column', margin: 4 }}>
-              <Card />              
+            <View style={{ flex: 1, flexDirection: 'column', margin:6 }}>
+              <Card
+              title={item.title}
+              image={item.mainImage} 
+              />              
             </View>
           )}
           //Setting the number of column

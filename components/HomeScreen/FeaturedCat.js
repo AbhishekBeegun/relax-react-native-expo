@@ -1,43 +1,30 @@
-import React from 'react'
+import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 import { View ,FlatList } from "react-native";
 import CategorieCard from "./CategorieCard";
-
+import { getFeaturedCategories } from "../../lib/client";
 
 const FeaturedCat = () => {
-    let fourgrid = [
-        {
-          name: "Meditate",
-          image:"https://t3.ftcdn.net/jpg/00/82/69/12/360_F_82691291_ER0rGruoM5zLxytoiQO1g85yhyXjq0Lv.jpg",
-          urilink:"meditate"
-        },
-        {
-          name: "Soundscape",
-          image:"https://images.ctfassets.net/cf0geq6u806a/6rDDkaNKARg5u41aIKo9C2/32bc23b17277e0d2131b75652842845b/river.png",
-          urilink:"soundscape"
-        },
-        {
-          name: "Stories",
-          image:"https://images6.alphacoders.com/116/1161440.jpg",
-          urilink:"stories"
-        },
-        {
-          name: "Sleep",
-          image:"https://i.pinimg.com/originals/17/86/e1/1786e10174d3fc160bc5c69e6dbaa0e2.jpg ",
-          urilink:"sleep"
-        },
-    
-      ]
-  return (
-    <View>
 
+  const [Data, setData] = useState()
+
+  useEffect(() => {
+      getFeaturedCategories().then((data) => setData(data))
+      .catch(console.error)      
+  }, [])
+
+  return (
+    <View className="">
     <FlatList
-          data={fourgrid}
+          data={Data}
           renderItem={({ item }) => (
             <View style={{ flex: 1, flexDirection: 'column', margin: 6 }}>
               <CategorieCard
-               name={item.name}
-               image={item.image}
-               urilink={item.urilink} />
+               id={item._id}
+               name={item.title}
+               image={item.mainImage}
+               />
             </View>
           )}
           //Setting the number of column

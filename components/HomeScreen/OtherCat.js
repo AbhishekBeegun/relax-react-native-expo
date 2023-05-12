@@ -1,19 +1,28 @@
-import React from 'react'
+import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 import { View,FlatList } from "react-native"
 import CategorieCard from "./CategorieCard"
+import { getOtherCategories } from "../../lib/client";
 
 const OtherCat = () => {
-    let lngcol = [1,2,3,4,5,6]
+  const [Data, setData] = useState()
+
+  useEffect(() => {
+      getOtherCategories().then((data) => setData(data))
+      .catch(console.error)      
+  }, [])
 
   return (
     <View>
         <FlatList
-          data={lngcol}
+          data={Data}
           renderItem={({ item }) => (
             <View style={{ flex: 1, flexDirection: 'column', margin: 6 }}>
               <CategorieCard
-               name={item.name}
-               image={item.image} />
+               id={item._id}
+               name={item.title}
+               image={item.mainImage} />
             </View>
           )}
           //Setting the number of column

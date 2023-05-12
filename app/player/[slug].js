@@ -10,14 +10,15 @@ const slug = () => {
     <SafeAreaView>
         <Stack.Screen
       options={{
-        headerTitle:`${params.slug}`,
+        headerTitle:"",
+        headerTransparent : true,
+        statusBarHidden : true,
         headerLeft : () => (
           <Backbtn/>
         )
               
       }}/>
-
-      <PlayerDetail />
+      <PlayerDetail paramsid={params.slug} />
     </SafeAreaView>
   )
 }

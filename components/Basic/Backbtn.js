@@ -14,7 +14,7 @@ const Backbtn = () => {
     <TouchableOpacity 
     className="pr-8"
     onPress={() => goBack()}>
-     <Ionicons name="arrow-back-circle-sharp" size={35} color="black" /> 
+     <Ionicons name="arrow-back-circle-sharp" size={35} color="white" /> 
     </TouchableOpacity>
   )
 }

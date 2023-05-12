@@ -5,6 +5,16 @@
       "bundler": "metro"
     },
     "name": "relax-calm-copy",
-    "slug": "relax-calm-copy"
+    "slug": "relax-calm-copy",
+    "splash": {
+      "image": "./assets/729333.webp",
+      "resizeMode": "cover"
+    },
+    "icon" : "./assets/icon.png",
+    "android":{
+      "adaptiveIcon":{
+        "foregroundImage" : "./assets/icon.png"
+      }
+    }
   }
 }

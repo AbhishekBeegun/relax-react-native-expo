@@ -1,12 +1,15 @@
 import { View,Text,Image,TouchableOpacity } from "react-native"
 import { useRouter
  } from "expo-router";
-const CategorieCard = ({name,urilink,image}) => {
+ import { urlFor } from "../../lib/client";
 
+const CategorieCard = ({name,image,id}) => {
+  
+  
   const router = useRouter()
 
   const handleCatPress = () => {
-    router.push(`/categorie-details/${urilink}`);  
+    router.push(`/categorie-details/${id}`);  
   };
 
   return (
@@ -14,7 +17,7 @@ const CategorieCard = ({name,urilink,image}) => {
     <View className="h-24 w-auto rounded-lg">
       <Image className="absolute w-full h-full rounded-lg opacity-80 bg-black" 
       resizeMode="cover"
-        source={{uri : `${image}` }}/>
+        source={{uri : `${urlFor(image)}` }}/>
 
     <TouchableOpacity
     onPress={handleCatPress}
