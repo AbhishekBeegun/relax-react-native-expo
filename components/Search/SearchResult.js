@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from "react"
 import { useEffect } from "react"
-import Card from "../Card"
+import Card from "../Cards/Card"
 import { View,Text } from "react-native"
 import { FlatList } from "react-native"
 
