@@ -14,8 +14,8 @@ const CategorieCard = ({name,image,id}) => {
 
   return (
     
-    <View className="h-24 w-auto rounded-lg">
-      <Image className="absolute w-full h-full rounded-lg opacity-80 bg-black" 
+    <View className="h-36 w-auto rounded-xl">
+      <Image className="absolute w-full h-full rounded-xl opacity-80 bg-black" 
       resizeMode="cover"
         source={{uri : `${urlFor(image)}` }}/>
 
@@ -24,7 +24,9 @@ const CategorieCard = ({name,image,id}) => {
     className="w-full h-full flex flex-col justify-center items-center">
 
 
-     <Text className="text-base text-white font-semibold">
+     <Text
+     style={{fontFamily : "SPOTFONT"}}
+     className="text-base text-white font-semibold">
       {name}
      </Text>
 

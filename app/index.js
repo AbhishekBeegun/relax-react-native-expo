@@ -1,11 +1,11 @@
 
 import { Stack } from "expo-router";
-import { View,Text, SafeAreaView, ScrollView,FlatList } from "react-native";
-import FeaturedCat from "../components/HomeScreen/FeaturedCat"
-import SearchBar from "../components/HomeScreen/SearchBar"
+import { SafeAreaView, ScrollView} from "react-native";
+
 import OtherCat from "../components/HomeScreen/OtherCat";
 import "react-native-url-polyfill/auto"
 import UnlockBanner from "../components/HomeScreen/UnlockBanner";
+import SearchFeaturedCat from "../components/HomeScreen/SearchFeaturedCat";
 
 const Home = () => {
 
@@ -24,8 +24,7 @@ const Home = () => {
         statusBarColor: "#121212" 
       }}/>
           <ScrollView>
-          <SearchBar />
-          <FeaturedCat/>    
+          <SearchFeaturedCat/>
           <UnlockBanner/>
           <OtherCat />
 

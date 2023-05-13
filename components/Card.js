@@ -26,11 +26,15 @@ const Card = ({title,author,image}) => {
 
        <View className="py-2 px-2">
 
-       <Text className="font-semibold text-xs text-white">
+       <Text
+       style={{fontFamily : "SPOTFONT"}}
+       className="font-semibold text-xs text-white">
         {title}
        </Text>
 
-       <Text className="text-xs text-white">
+       <Text 
+       style={{fontFamily : "SPOTFONT"}}
+       className="text-xs text-white">
         {author}
        </Text>
        </View>

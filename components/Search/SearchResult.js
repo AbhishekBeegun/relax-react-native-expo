@@ -1,29 +1,26 @@
 import React from 'react'
 import { useState } from "react"
 import { useEffect } from "react"
-import Card from "../../components/Card"
-import { View,Text,ActivityIndicator } from "react-native"
+import Card from "../Card"
+import { View,Text } from "react-native"
 import { FlatList } from "react-native"
 
-import {getCategoriePosts } from "../../lib/client"
+import {getSearchDetails } from "../../lib/client"
 
 
-const CatDetail = ({paramsid}) => {
+const SearchResult = ({paramsid}) => {
 
   const [Data, setData] = useState(null)
 
   useEffect(() => {
-    getCategoriePosts(paramsid).then((data) => setData(data))
-    .then(console.log(Data))
+    getSearchDetails(paramsid).then((data) => setData(data))
     .catch(console.error)     
 
   }, [])
   
 
   return (
-    <View className="py-16">
-
-      {Data ? 
+    <View className="py-16 h-screen">
       <FlatList
           data={Data}
           renderItem={({ item }) => (
@@ -38,13 +35,8 @@ const CatDetail = ({paramsid}) => {
           numColumns={2}
           keyExtractor={(item, index) => index}
         />
-        :
-        <View className="h-[100vh] w-screen flex flex-row justify-center items-center">       
-        <ActivityIndicator size={50} color={"white"}>
-        </ActivityIndicator>
-        </View> }
     </View>
   )
 }
 
-export default CatDetail
+export default SearchResult

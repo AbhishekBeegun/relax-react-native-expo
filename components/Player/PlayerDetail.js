@@ -29,7 +29,9 @@ const PlayerDetail = ({paramsid}) => {
     resizeMode="cover"
       source={{uri : `${urlFor(post.mainImage)}` 
     }}/>
-      <Text className="py-36 px-10 text-center text-white text-2xl font-semibold">
+      <Text 
+      style={{fontFamily : "SPOTFONT"}}
+      className="py-36 px-10 text-center text-white text-2xl font-semibold">
        {post.title}
       </Text>
 
@@ -37,7 +39,7 @@ const PlayerDetail = ({paramsid}) => {
       className="w-[250px] -z-10 ">
         <YoutubeIframe
         webViewStyle={{opacity:0}}
-        height={150}
+        height={100}
         play={Isplaying}
         videoId={`${post.audiolink}`}
         />  

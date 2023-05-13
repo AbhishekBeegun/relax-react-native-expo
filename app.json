@@ -4,16 +4,17 @@
     "web": {
       "bundler": "metro"
     },
-    "name": "relax-calm-copy",
-    "slug": "relax-calm-copy",
+    "name": "Relax",
+    "slug": "relax",
     "splash": {
-      "image": "./assets/729333.webp",
+      "image": "./assets/987756.jpg",
       "resizeMode": "cover"
     },
-    "icon" : "./assets/icon.png",
+    "icon" : "./assets/icondalle.png",
     "android":{
       "adaptiveIcon":{
-        "foregroundImage" : "./assets/icon.png"
+        "foregroundImage" : "./assets/icondalle.png",
+        "backgroundColor" : "#ffffff"
       }
     }
   }

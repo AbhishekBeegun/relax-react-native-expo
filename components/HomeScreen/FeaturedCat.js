@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { View ,FlatList } from "react-native";
+import { View ,FlatList,Image,Text,ActivityIndicator} from "react-native";
 import CategorieCard from "./CategorieCard";
 import { getFeaturedCategories } from "../../lib/client";
 
@@ -15,8 +15,11 @@ const FeaturedCat = () => {
   }, [])
 
   return (
-    <View className="">
-    <FlatList
+    
+    <View>
+
+      {Data ? 
+        <FlatList
           data={Data}
           renderItem={({ item }) => (
             <View style={{ flex: 1, flexDirection: 'column', margin: 6 }}>
@@ -31,7 +34,17 @@ const FeaturedCat = () => {
           numColumns={2}
           keyExtractor={(item, index) => index}
         />
+        : 
+        <View className=" w-screen flex flex-row justify-center items-center">       
+        <ActivityIndicator size={50} color={"white"}>
+        </ActivityIndicator>
         </View>
+}
+       
+        </View>
+       
+
+
 
   )
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { View,FlatList } from "react-native"
+import { View,FlatList,ActivityIndicator } from "react-native"
 import CategorieCard from "./CategorieCard"
 import { getOtherCategories } from "../../lib/client";
 
@@ -15,6 +15,7 @@ const OtherCat = () => {
 
   return (
     <View>
+      {Data ? 
         <FlatList
           data={Data}
           renderItem={({ item }) => (
@@ -29,6 +30,12 @@ const OtherCat = () => {
           numColumns={1}
           keyExtractor={(item, index) => index}
         />
+        :
+        <View className="h-[100vh] w-screen flex flex-row justify-center items-center">       
+        <ActivityIndicator size={50} color={"white"}>
+        </ActivityIndicator>
+        </View>
+       }
 
 
     </View>
