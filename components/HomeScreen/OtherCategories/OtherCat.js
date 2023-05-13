@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { View,FlatList,ActivityIndicator } from "react-native"
-import CategorieCard from "./CategorieCard"
-import { getOtherCategories } from "../../lib/client";
+import CategorieCard from "../../Cards/CategorieCard"
+import { getOtherCategories } from "../../../lib/client";
 
 const OtherCat = () => {
   const [Data, setData] = useState()
@@ -14,7 +14,7 @@ const OtherCat = () => {
   }, [])
 
   return (
-    <View>
+    <View className="bg-[#121212]">
       {Data ? 
         <FlatList
           data={Data}

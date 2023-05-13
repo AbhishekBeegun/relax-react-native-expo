@@ -1,10 +1,9 @@
 
 import { Stack } from "expo-router";
 import { SafeAreaView, ScrollView} from "react-native";
-
-import OtherCat from "../components/HomeScreen/OtherCat";
+import OC from "../components/HomeScreen/OtherCategories/OC"
 import "react-native-url-polyfill/auto"
-import UnlockBanner from "../components/HomeScreen/UnlockBanner";
+import UnlockBanner from "../components/HomeScreen/Banner/UnlockBanner";
 import SearchFeaturedCat from "../components/HomeScreen/SearchFeaturedCat";
 
 const Home = () => {
@@ -13,20 +12,17 @@ const Home = () => {
 
 
     return (
-        <SafeAreaView style={{
-         backgroundColor : "#121212"
-        }} >
+        <SafeAreaView>
 
+        <ScrollView>
      <Stack.Screen
       options={{
         headerTitle:"",  
         headerTransparent : true,
-        statusBarColor: "#121212" 
       }}/>
-          <ScrollView>
           <SearchFeaturedCat/>
           <UnlockBanner/>
-          <OtherCat />
+          <OC/>
 
           </ScrollView>
         </SafeAreaView>

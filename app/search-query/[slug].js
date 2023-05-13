@@ -10,15 +10,12 @@ const slug = () => {
 
 
   return (
-    <SafeAreaView style={{
-      backgroundColor :"#121212"
-    }}>
+    <SafeAreaView>
 
     <Stack.Screen
       options={{
         headerTitle:"",
         headerTransparent : true,
-        statusBarColor: "#121212" ,
         headerLeft : () => (
           <Backbtn/>
         )

@@ -12,7 +12,6 @@ const slug = () => {
       options={{
         headerTitle:"",
         headerTransparent : true,
-        statusBarHidden : true,
         headerLeft : () => (
           <Backbtn/>
         )

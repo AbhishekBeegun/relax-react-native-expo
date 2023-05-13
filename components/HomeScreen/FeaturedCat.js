@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { View ,FlatList,Image,Text,ActivityIndicator} from "react-native";
-import CategorieCard from "./CategorieCard";
+import CategorieCard from "../Cards/CategorieCard";
 import { getFeaturedCategories } from "../../lib/client";
 
 const FeaturedCat = () => {

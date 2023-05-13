@@ -1,6 +1,6 @@
 import { View,Text,TouchableOpacity,Image } from "react-native"
 import { useRouter } from "expo-router";
-import { urlFor } from "../lib/client";
+import { urlFor } from "../../lib/client";
 
 const Card = ({title,author,image}) => {
 

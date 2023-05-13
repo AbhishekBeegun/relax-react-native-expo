@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from "react"
 import { useEffect } from "react"
-import Card from "../../components/Card"
+import Card from "../../components/Cards/Card"
 import { View,Text,ActivityIndicator } from "react-native"
 import { FlatList } from "react-native"
 
@@ -21,7 +21,7 @@ const CatDetail = ({paramsid}) => {
   
 
   return (
-    <View className="py-16">
+    <View className="py-16 bg-[#121212]">
 
       {Data ? 
       <FlatList

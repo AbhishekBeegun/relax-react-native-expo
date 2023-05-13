@@ -3,7 +3,7 @@ import { View,Text, TouchableOpacity,Image } from "react-native"
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 const UnlockBanner = () => {
   return (
-    <View className="px-4 py-2">
+    <View className="px-4 py-2 bg-[#121212]">
     <TouchableOpacity className="h-14 bg-white rounded-lg">
     <View className="flex flex-row h-full items-center justify-center">
      <Text 
