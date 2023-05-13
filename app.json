@@ -6,15 +6,17 @@
     },
     "name": "Relax",
     "slug": "relax",
-    "splash": {
-      "image": "./assets/987756.jpg",
-      "resizeMode": "cover"
+    "icon": "./assets/icondalle.png",
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icondalle.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.abhishekbeegun.relax"
     },
-    "icon" : "./assets/icondalle.png",
-    "android":{
-      "adaptiveIcon":{
-        "foregroundImage" : "./assets/icondalle.png",
-        "backgroundColor" : "#ffffff"
+    "extra": {
+      "eas": {
+        "projectId": "a4e922c6-c696-445d-9a17-ef8fc2fecb21"
       }
     }
   }
