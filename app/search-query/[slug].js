@@ -21,9 +21,9 @@ const slug = () => {
         )
               
       }}/>
-    <ScrollView>
+ 
       <SearchResult paramsid={params.slug} />
-    </ScrollView>
+
     </SafeAreaView>
   )
 }

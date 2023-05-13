@@ -20,7 +20,7 @@ const SearchResult = ({paramsid}) => {
   
 
   return (
-    <View className="py-16 h-screen">
+    <View className="pt-16 h-screen bg-[#121212]">
       <FlatList
           data={Data}
           renderItem={({ item }) => (

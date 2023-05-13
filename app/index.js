@@ -25,11 +25,7 @@ const Home = () => {
         headerTitle:"",  
         headerTransparent : true,
       }}/>
-          {/* <SearchFeaturedCat/>
-          <UnlockBanner/>
-          <OC/> */}
-
-         
+        
         </SafeAreaView>
     )
 }

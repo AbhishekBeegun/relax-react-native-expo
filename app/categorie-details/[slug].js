@@ -24,9 +24,10 @@ const slug = () => {
         )
               
       }}/>
-    <ScrollView>
+     
       <CatDetail paramsid={params.slug} />
-    </ScrollView>
+    
+
     </SafeAreaView>
   )
 }
