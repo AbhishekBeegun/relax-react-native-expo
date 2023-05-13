@@ -6,10 +6,10 @@
     },
     "name": "Relax",
     "slug": "relax",
-    "icon": "./assets/icondalle.png",
+    "icon": "./assets/logo.png",
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icondalle.png",
+        "foregroundImage": "./assets/logo.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.abhishekbeegun.relax"
