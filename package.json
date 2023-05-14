@@ -9,6 +9,7 @@
     "@expo/vector-icons": "^13.0.0",
     "@sanity/client": "^6.0.1",
     "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.10.3",
     "axios": "^1.4.0",
     "expo": "^48.0.7",
     "expo-av": "^13.2.1",
